@@ -146,7 +146,7 @@ export default {
                 this.$emit('autocomplete-select', place, response[0]);
             });
         },
-        
+
         searchDebounce: debounce(function() {
             this.search().then(response => {
                 this.predictions = response;
@@ -156,7 +156,7 @@ export default {
                     this.predictions = false;
                 }
             });
-        }, 1000),
+        }, 1200),
 
         search() {
             return new Promise((resolve, reject) => {
